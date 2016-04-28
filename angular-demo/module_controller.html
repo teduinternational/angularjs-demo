@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <!--<script src="srcipts/angular.min.js"></script>-->
+  <script src="srcipts/angular.js"></script>
+  <script src="srcipts/app.js"></script>
+</head>
+<body ng-controller="myController">
+  <div>
+
+    First Name: <input type="text" ng-model="employee.FirstName" /><br />
+    Last Name: <input type="text" ng-model="employee.LastName" /><br />
+    Gender: <input type="text" ng-model="employee.Gender" /><br />
+    <br />
+    <br />
+    First Name: {{employee.FirstName}}<br />
+    Last Name: {{employee.LastName}}<br />
+    Gender: {{employee.Gender}}<br />
+  </div>
+ 
+</body>
+</html>

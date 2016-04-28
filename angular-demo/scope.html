@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <script src="srcipts/angular.js"></script>
+  <script src="srcipts/scopeDemo/app.js"></script>
+</head>
+<body ng-app="scopeDemo">
+  <div ng-controller="topController">
+    <div ng-controller="classController">
+      <div>{{name}}</div>
+    </div>
+
+    <div ng-controller="schoolController">
+      <div>{{name}}</div>
+    </div>
+    {{name}}
+  </div>
+ 
+</body>
+</html>
