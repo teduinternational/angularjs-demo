@@ -69,6 +69,7 @@
     <Content Include="customdirective.html" />
     <Content Include="directive.html" />
     <Content Include="module_controller.html" />
+    <Content Include="ng-repeat.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -84,6 +85,9 @@
     <Content Include="srcipts\angular.min.js" />
     <Content Include="srcipts\app.js" />
     <Content Include="srcipts\directiveApp.js" />
+    <Content Include="nested-repeat.html" />
+    <Content Include="srcipts\nested-repeat.js" />
+    <Content Include="srcipts\repeat.js" />
     <Content Include="srcipts\scopeDemo\app.js" />
     <Content Include="Web.config" />
   </ItemGroup>
