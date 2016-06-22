@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+  <script src="/srcipts/angular.js"></script>
+  <script src="/session6/script.js"></script>
+</head>
+<body ng-app="TEDU">
+  <div ng-controller="handleEventController">
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Likes</td>
+        <td>Dislikes</td>
+        <td>Minus</td>
+        <td>Actions</td>
+      </tr>
+      <tr ng-repeat="technology in technologies">
+        <td>{{technology.Name}}</td>
+        <td>{{technology.Likes}}</td>
+        <td>{{technology.Dislikes}}</td>
+        <td>{{technology.Minus}}</td>
+        <td>
+          <button ng-click="increaseLike(technology)">Like</button>
+          <button ng-click="increaseDislike(technology)">Dislike</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

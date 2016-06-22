@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="customdirective.html" />
     <Content Include="directive.html" />
+    <Content Include="session6\handle_event.html" />
     <Content Include="module_controller.html" />
     <Content Include="ng-repeat.html" />
     <Content Include="packages.config" />
@@ -81,6 +82,7 @@
   <ItemGroup>
     <Content Include="intro.html" />
     <Content Include="scope.html" />
+    <Content Include="session6\script.js" />
     <Content Include="srcipts\angular.js" />
     <Content Include="srcipts\angular.min.js" />
     <Content Include="srcipts\app.js" />
