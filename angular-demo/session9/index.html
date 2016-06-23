@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+  <script src="../srcipts/angular.js"></script>
+  <script src="/session9/app.js"></script>
+
+</head>
+<body ng-app="app">
+  <div ng-controller="filterOrderByCtrl">
+    Show: <select ng-model="sortColumn">
+      <option value="name">Name ASC</option>
+      <option value="birthDate">Date of Birth ASC</option>
+      <option value="name">Salary ASC</option>
+      <option value="-name">Name DESC</option>
+      <option value="-birthDate">Date of Birth DESC</option>
+      <option value="-salary">Salary DESC</option>
+    </select>
+    <table class="table">
+      <tr>
+        <td>Name</td>
+        <td>Date of Birth</td>
+        <td>Salary</td>
+        <td>Gender</td>
+        <td>Status</td>
+      </tr>
+      <tr ng-repeat="employee in employees | orderBy:sortColumn">
+        <td>{{employee.name | uppercase}}</td>
+        <td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
+        <td>{{employee.salary | currency:""}}</td>
+        <td>{{employee.gender | lowercase}}</td>
+        <td>{{employee.status | status}}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
