@@ -83,6 +83,8 @@
     <Content Include="intro.html" />
     <Content Include="scope.html" />
     <Content Include="session6\script.js" />
+    <Content Include="session8\app.js" />
+    <Content Include="session8\index.html" />
     <Content Include="srcipts\angular.js" />
     <Content Include="srcipts\angular.min.js" />
     <Content Include="srcipts\app.js" />
