@@ -72,6 +72,8 @@
     <Content Include="session10\index.html" />
     <Content Include="session11\app.js" />
     <Content Include="session11\index.html" />
+    <Content Include="session12\app.js" />
+    <Content Include="session12\index.html" />
     <Content Include="session6\handle_event.html" />
     <Content Include="module_controller.html" />
     <Content Include="ng-repeat.html" />

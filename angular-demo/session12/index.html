@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+  <script src="../srcipts/angular.js"></script>
+  <script src="/session12/app.js"></script>
+  <style>
+    table thead tr{
+      cursor:pointer;
+    }
+    /*This class displays the UP arrow*/
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 10px solid black;
+      display: inline-block;
+    }
+
+    /*This class displays the DOWN arrow*/
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid black;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body ng-app="app">
+  <div ng-controller="showHideCtrl">
+    Search: <input type="text" ng-model="searchText" /> 
+    <label>
+      <input type="checkbox" ng-model="hideSalary" />
+      Hide salary
+    </label>
+    <table class="table">
+      <thead>
+        <tr>
+          <td ng-click="sortData('name')">Name <div ng-class="getSortClass('name')"></div></td>
+          <td ng-click="sortData('birthDate')"> Date of Birth <div ng-class="getSortClass('birthDate')"></div></td>
+          <td ng-hide="hideSalary" ng-click="sortData('salary')">Salary <div ng-class="getSortClass('salary')"></div></td>
+          <td ng-show="hideSalary" ng-click="sortData('salary')">Salary <div ng-class="getSortClass('salary')"></div></td>
+          <td ng-click="sortData('gender')">Gender <div ng-class="getSortClass('gender')"></div></td>
+          <td ng-click="sortData('status')">Status <div ng-class="getSortClass('status')"></div></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="employee in employees | orderBy:sortColumn:reverse | filter:searchText">
+          <td>{{employee.name | uppercase}}</td>
+          <td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
+          <td ng-hide="hideSalary">{{employee.salary | currency:""}}</td>
+          <td ng-show="hideSalary">xxxxxxx</td>
+          <td>{{employee.gender | lowercase}}</td>
+          <td>{{employee.status | status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
