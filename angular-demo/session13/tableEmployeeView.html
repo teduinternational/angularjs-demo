@@ -1,0 +1,16 @@
+﻿<table class="table">
+  <tr>
+    <td>Name</td>
+    <td>Date of Birth</td>
+    <td>Salary</td>
+    <td>Gender</td>
+    <td>Status</td>
+  </tr>
+  <tr ng-repeat="employee in employees">
+    <td>{{employee.name | uppercase}}</td>
+    <td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
+    <td>{{employee.salary | currency:""}}</td>
+    <td>{{employee.gender | lowercase}}</td>
+    <td>{{employee.status | status}}</td>
+  </tr>
+</table>
