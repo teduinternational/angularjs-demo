@@ -81,6 +81,9 @@
     <Content Include="session14\app.js" />
     <Content Include="session14\Employees.asmx" />
     <Content Include="session14\employeeView.html" />
+    <Content Include="session16\app.js" />
+    <Content Include="session16\index.html" />
+    <Content Include="session16\stringService.js" />
     <Content Include="session6\handle_event.html" />
     <Content Include="module_controller.html" />
     <Content Include="ng-repeat.html" />
